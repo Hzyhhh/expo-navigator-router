@@ -18,12 +18,17 @@ const Abc: FC<AbcProps> = (props) => {
     navigation.navigate(RouteEnum.Bcd, { userId: "123" });
   };
 
+  const handleNavigatorExample = () => {
+    navigation.navigate(RouteEnum.RcExample, {});
+  };
+
   return (
     <SafeAreaView>
       <View style={styled.container}>
         <Text>abc</Text>
         <Button title="123" onPress={handlePress} />
         <Button title="页面跳转" onPress={handleNavigator} />
+        <Button title="跳转rc-form-example" onPress={handleNavigatorExample} />
       </View>
     </SafeAreaView>
   );
